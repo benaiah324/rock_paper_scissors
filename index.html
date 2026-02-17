@@ -1,4 +1,79 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+
+    <h1 class="title">ROCK • PAPER • SCISSORS</h1>
+
+    <div class="game-container">
+
+        <!-- PLAYER SIDE -->
+        <div class="side player-side">
+            <h2>PLAYER</h2>
+            <img id="playerImage" src="./images/rock.png" class="rps-img" width="60px">
+        </div>
+
+        <!-- VS -->
+        <div class="vs">
+            VS
+        </div>
+
+        <!-- COMPUTER SIDE -->
+        <div class="side computer-side">
+            <h2>COMPUTER</h2>
+            <img id="computerImage" src="./images/rock.png" class="rps-img" width="60px">
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <button data-choice="rock">Rock</button>
+        <button data-choice="paper">Paper</button>
+        <button data-choice="scissors">Scissors</button>
+    </div>
+
+    <div class="scoreboard">
+        Player: <span id="playerScore">0</span> |
+        Computer: <span id="computerScore">0</span>
+    </div>
+
+    <div id="result"></div>
+
+    <audio id="clickSound" src="./audio/click.mp3"></audio>
+    <audio id="winSound" src="./audio/win.mp3"></audio>
+    <audio id="loseSound" src="./audio/lose.mp3"></audio>
+
+    <canvas id="particles"></canvas>
+    <canvas id="confetti"></canvas>
+
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <h2 id="winnerText"></h2>
+            <button id="restartBtn">Play Again</button>
+        </div>
+    </div>
+
+    <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="hard">Hard</option>
+    </select>
+
+    <audio id="bgMusic" src="bg-music.mp3" loop></audio>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,4 +101,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> -->
